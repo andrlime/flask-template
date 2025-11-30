@@ -17,3 +17,15 @@ tasks:
       - task: format
       - task: lint
       - task: strict-check
+  dev:
+    env:
+      PORT: 9000
+    cmds:
+      - docker build --target dev -t template-dev .
+      - docker run -e PORT=$PORT -p $PORT:$PORT template-dev
+  prod:
+    env:
+      PORT: 9000
+    cmds:
+      - docker build --target prod -t template-prod .
+      - docker run -e PORT=$PORT -p $PORT:$PORT template-prod
