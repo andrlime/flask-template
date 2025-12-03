@@ -7,6 +7,7 @@ sed -i.bak "s/template/$PROJECT_NAME_DASH/g" pyproject.toml
 sed -i.bak "s/template/$PROJECT_NAME_UNDERSCORE/g" main.py
 sed -i.bak "s/template/$PROJECT_NAME_UNDERSCORE/g" template/constants.py
 sed -i.bak "s/template/$PROJECT_NAME_UNDERSCORE/g" template/flask/factory.py
+sed -i.bak "s/template/$PROJECT_NAME_UNDERSCORE/g" template/blueprints/root/api.py
 rm -f *.bak
 rm -f template/*.bak
 
